@@ -1,0 +1,5 @@
+<h1>Advanced database search</h1>
+<body>
+<p>In the event that the question you need answered is not available in the list, the advanced database search tab allows the user to enter a valid SQL query to answer any questions they may have. That being said, the effects of the SQL statement will not be committed to the database, so if an INSERT or DELETE statement is executed, the changes will not actually be saved to the database. The purpose of this tab is to expand the complexity of SELECT statements.</p>
+<p>There are no consequences to entering an incorrect SQL statement, but this tool is best reserved for more technical users and possibly as a debugging tool if an SQL query needs to be added to the list.</p>
+</body>

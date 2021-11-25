@@ -1,0 +1,32 @@
+<html>
+<h1>Intro to the program</h1>
+<body>
+<blockquote>You can contact the creator of the program (Cameron Hickey) with questions, feature requests, etc. at: <b>cameron.s.hickey@gmail.com</b>
+<p>This program’s aim is to expedite the retrieval of class information to an advising staff member. When the program starts, you will see 4 separate tabs at the top of the window:</p>
+<ul>
+<li>Database management</li>
+<li>Get information from database</li>
+<li>Advanced database search</li>
+<li>How to use</li>
+</ul>
+<h4>Database management</h4>
+<p>This tab is where a user enters their database credentials and logs in. You will know you have successfully logged into the database when a green banner appears that says “LOGIN SUCCESSFUL.” If your login has failed for some reason, you will see a red banner that says “LOGIN FAILED.” If you are not logged into your database, you will not be able to use the features of the program, so be sure to log in each time you open the program.</p>
+<p>When an Excel file is selected, its contents are uploaded to the database and are immediately available for querying. The semester and year of the Excel file are automatically detected when the file is uploaded, so these will be the values used when querying the database.</p>
+<p>Learn more about this tab in: <i>HOW TO USE: Database management</i>.</p>
+<h4>Get information from database</h4>
+<p>This tab is where a user can find information about classes by selecting preset questions. By selecting a query from the list and then clicking the SELECT button at the bottom of the screen, a window will appear where the user can input their specific parameters and have their specific query answered. The specifics of the parameter system will be covered in this tab’s help page.</p>
+<p>The answer to the query will be displayed in a new window after all parameter fields have been filled in and the ENTER button has been clicked.</p>
+<p>Learn more about this tab in: <i>HOW TO USE: Get information from database</i>.</p>
+<h4>Advanced database search</h4>
+<p>This tab is similar to “Get information from database” in the sense that it also queries the database to provide the user with info. However, there are no preset queries for the user to select from. Instead, the user inputs a full SQL query into the field at the top of the page and then presses the ENTER button. Provided the query is valid, the results of the query will be displayed in the box below the text field.</p>
+<p>Learn more about this tab in: <i>HOW TO USE: Advanced database search</i>.</p>
+<h4>Questions you may have</h4>
+<p>This tab serves as a FAQ page for this program’s functionality. Navigate to this tab to see the extent of its content.</p>
+<h4>Format for Excel files</h4>
+<p>This tab goes in-depth on the format of the Excel sheets and its columns. This is important for knowing how to add queries to the program.</p>
+<h4>Database schema</h4>
+<p>Describes the structure of the database used to hold Excel files.</p>
+<h4>Adding queries</h4>
+<p>This tab is more technical and discusses the process of properly adding queries to the list for the users.</p>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+<h1>Database management</h1>
+<body>
+<p><i>NOTE: This program uses PostreSQL</i></p>
+<p>This tab is the first view users will see when they open the program. There are 4 text fields that the user can enter information in:</p>
+<ul>
+<li>Server: The address of the server which hosts the database.</li>
+<li>Database: The name of the database on the server.</li>
+<li>Username: A username used to log into the database.</li>
+<li>Password: The password used to authenticate a user into the database.</li>
+</ul>
+<p>When all these fields are filled in, the user can select the LOGIN button; if the credentials are correct, the a green label will appear saying <b>LOGIN SUCCESSFUL.</b> If incorrect, a red banner will appear saying <b>LOGIN FAILED. CHECK YOUR CREDENTIALS.</b> In the case of the latter, the user will not be able to use features of the program as they are not yet authorized to access the database. Otherwise, the user will be able to use the program as much as they want until the program is closed, in which case the credentials will need to be re-entered the next time the program is opened.</p>
+<p>The UPLOAD SPREADSHEET button, provided the user has logged in, will open a window in which the user can select an Excel spreadsheet to upload to the database. When a spreadsheet is selected, its corresponding year and semester is detected and subsequently stored in the database along with all its course listings. If another spreadsheet with the same year and semester is uploaded, the old listings are deleted from the database and are replaced with the latest uploaded spreadsheet.</p>
+<p>A small message will be displayed on the window saying that the file was successfully uploaded for a certain semester and year upon successful uploading to the database. Any information successfully uploaded to the database is immediately accessible from the program; no restart is required.</p>
+</body>
+</html>

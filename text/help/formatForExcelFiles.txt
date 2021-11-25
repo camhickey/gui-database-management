@@ -1,0 +1,43 @@
+<html>
+<h1>Format for Excel files</h1>
+<body>
+<p>The columns of the Excel file (as of Fall 2021) are:</p>
+<ul>
+<li>Session Code</li>
+<li>Session Begin Date</li>
+<li>Session End Date</li>
+<li>Drop/Add End Date</li>
+<li>Grading End Date</li>
+<li>Course</li>
+<li>Gord Rule</li>
+<li>Gen ED</li>
+<li>Hons List</li>
+<li>Sect</li>
+<li>Class Nbr</li>
+<li>Assoc Class</li>
+<li>Min – Max Cred</li>
+<li>Day/s</li>
+<li>Time</li>
+<li>Meeting Pattern</li>
+<li>Facility</li>
+<li>Join</li>
+<li>Site</li>
+<li>County</li>
+<li>Spec</li>
+<li>Book</li>
+<li>SOC</li>
+<li>Exam</li>
+<li>Course Title</li>
+<li>Instructor</li>
+<li>Instructor Emails</li>
+<li>Enr Cap</li>
+<li>Room Cap</li>
+<li>Enrolled</li>
+<li>Multi Meet Cap</li>
+<li>Sched Codes</li>
+<li>Class Status</li>
+</ul>
+<p>If this format changes, the program and database must be updated to reflect that</p>
+<p>In order for an Excel file to be accepted by the program, these columns must be present in this order. Additionally, it is important that the year and semester are present in the Excel header as well.</p>
+</body>
+</html>

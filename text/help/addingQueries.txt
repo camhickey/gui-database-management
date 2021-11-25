@@ -1,0 +1,15 @@
+<html>
+<h1>Adding queries</h1>
+<body>
+<p>In order to add queries to the query list, modifications must be made to <i>text/queries.txt</i>. The queries are organized in the manner of:<blockquote>Natural language query|SQL query</blockquote></p>
+<p>The natural language query is what the user will see in the query list, while the SQL query contains the query that the computer will perform. Important to note is the column | that separates the two queries; this is necessary to differentiate the two. There are also no spaces between the queries, just a column.</p>
+<h4>Constructing the natural language query</h4>
+<p>When making a natural language query, you must enclose all parameters between angle brackets like <b>&lt;this&gt;</b>. You can use any database column as a valid parameter; to see a full list of database columns/valid parameters, open the �Database schema� section of the help docs. You must spell the column exactly as they appear in �Database schema� and also enclose them in tags in order for the query to not be erroneous.</p>
+<h4>Constructing the SQL query</h4>
+<p>The database for these listings only has one table named �courses�, so all rows should be selected from this table when making an SQL query. The only other requirement is that user input for parameters should be marked with �{n}�, where <i>n</i> is the <i>nth</i> parameter in the query, with the first parameter always being 0, the second being 1, and so on. This is more easily illustrated with a full example.<blockquote>When was a &lt;course&gt; taught?|SELECT DISTINCT course, semester, year FROM courses WHERE course IN ({0});</blockquote></p>
+<p>In this example, the parameter <b>&lt;course&gt;</b> in the natural language query is marked by <b>{0}</b> in the SQL query. You can visualize the <b>{0}</b> as being a placeholder for user input.</p>
+<p>In the case of multiple parameters, the parameters should be marked in the order that they appear. So in this example:<blockquote>Which faculty members taught &lt;course&gt; in &lt;semester&gt; &lt;year&gt;?|SELECT DISTINCT instructor, course, semester, year FROM courses WHERE course IN ({0}) AND semester IN ({1}) AND year IN ({2});
+</blockquote><b>&lt;course&gt;</b> is marked by a 0, <b>&lt;semester&gt;</b> is marked by a 1, and <b>&lt;year&gt;</b> is marked by a 2, as that is the order in which they appear in the natural language query. You can also opt to not include any parameters at all in your queries. If this is the case, just write the natural language query as you would and pair it with an appropriate SQL statement that will retrieve the information.</p>
+<p>When this string is completed, it should be added to <i>queries.txt</i>. The query list will be updated when the program is restarted.</p>
+</body>
+</html>

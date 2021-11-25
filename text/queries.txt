@@ -1,0 +1,6 @@
+﻿Which faculty members have ever taught <course>?|SELECT DISTINCT instructor, course FROM courses WHERE course IN ({0});
+When was a <course> taught?|SELECT DISTINCT course, semester, year FROM courses WHERE course IN ({0});
+Which faculty members taught <course> in <semester> <year>?|SELECT DISTINCT instructor, course FROM courses WHERE course IN ({0}) AND semester IN ({1}) AND year IN ({2});
+List all faculty members and their e-mail.|SELECT DISTINCT instructor, instructor_emails FROM courses;
+Which semesters has some <course> been taught recently and what was the enrollment?|SELECT course, enrolled, semester, year FROM courses WHERE course IN ({0});
+How many times has each different special topics course (CIS4930, CIS6930) been taught?|SELECT course_title, COUNT(*) FROM courses WHERE course IN ('CIS4930','CIS6930') GROUP BY course_title;

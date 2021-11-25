@@ -1,0 +1,20 @@
+<html>
+<h1>Get information from database</h1>
+<body>
+<p>This tab is used as an interface for the user to ask preset questions to the database without needing proficiency in SQL.</p>
+<p>The body of the tab contains a list of questions which contain some number of words enclosed in angle brackets, like <b>&lt;this&gt;</b>. The words enclosed in these brackets are the parameters for the query, meaning the user can substitute them with the information they want.</p>
+<p>For example, the query:</p>
+<blockquote>When was a <b>&lt;course&gt;</b> taught?</blockquote>
+<p>has one parameter, <b>&lt;course&gt;</b>. Selecting this query will bring up a window that contains a text field with the word “COURSE” above it. By entering in a course code, such as CDA3101, the question that the database answers becomes:
+<blockquote>When was <b>CDA3101</b> taught?</blockquote>
+<p>When the user clicks ENTER, a text box will display every year that CDA3101 was taught. This scheme follows for any number of potential parameters. If there are two parameters, there will be two text fields the user will enter information in.</p>
+<h4>Entering parameter data</h4>
+<p>When entering parameters into a field, case sensitivity does not matter. If entering multiple parameters into a single field, make sure to separate each parameter with a comma.</p>
+<p>For example, the query:</p>
+<blockquote>When was a <b>&lt;course&gt;</b> taught?</blockquote>
+<p>can answer when multiple courses were taught. If the user were to enter, for example, CDA3101 and COT3100, into the parameter field, it would need to be done like this:
+<blockquote><i>CDA3101, COT3100</i></blockquote>
+<p>By entering these parameters, the user is essentially asking when “When was CDA3101 taught?” and “When was COT3100 taught?” in one query (the database is not answering in what years were <i>both</i> taught; it is just answering in what years were either of these courses taught). Keep in mind, spelling does matter with parameters. For example, if the user enters an incorrect course code, the database will not return anything, as that course code does not exist. Similarly, <b>unless the question states otherwise</b>, simply entering part of a parameter will not return an answer.</p>
+<p>It is important to note how the question you are asking is worded, as that will determine the effect of adding multiple parameters to a field.</p>
+</body>
+</html>
