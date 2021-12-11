@@ -1,4 +1,14 @@
-﻿When was a <course> taught?|SELECT DISTINCT course, semester, year FROM courses WHERE course IN ({0});
-Which faculty members taught <course> in <semester> <year>?|SELECT DISTINCT instructor, course FROM courses WHERE course IN ({0}) AND semester IN ({1}) AND year IN ({2});
-List all faculty members and their e-mail.|SELECT DISTINCT instructor, instructor_emails FROM courses;
-Give enrollment for a <course> in <semester> <year>?|WITH classes AS (SELECT enrolled, sect FROM courses WHERE course IN ({0}) AND semester=({1}) AND year=({2}) GROUP BY enrolled, sect) SELECT SUM(enrolled) FROM classes;
+﻿Which faculty members have ever taught <course>?|SELECT DISTINCT instructor, course FROM courses WHERE course IN ({0});
+
+Which courses has <instructor> taught since <year>?|SELECT DISTINCT(course, semester, year) FROM courses WHERE instructor IN ({0}) AND year>={1};
+
+What was the enrollment for a <course> in <semester> <year>?|WITH classes AS (SELECT enrolled, sect FROM courses WHERE course IN ({0}) AND semester IN ({1}) AND year IN ({2}) GROUP BY enrolled, sect) SELECT SUM(enrolled) FROM classes;
+
+How many times has each different special topics course (CIS4930, CIS6930) been taught since <year>?|WITH special_topics AS (SELECT DISTINCT(sect, semester, year), course_title FROM courses WHERE course IN ('CIS4930', 'CIS6930') AND year>={0}) SELECT course_title, COUNT(*) FROM special_topics GROUP BY course_title;
+
+How many total students has an <instructor> taught since <year>?|WITH classes AS (SELECT enrolled, sect, instructor FROM courses WHERE instructor IN ({0}) AND year>={1} GROUP BY enrolled, sect, instructor) SELECT SUM(enrolled), instructor FROM classes GROUP BY instructor;
+
+For each instructor, how many students have they taught since <year>?|WITH classes AS (SELECT enrolled, sect, instructor FROM courses WHERE year>={0} GROUP BY enrolled, sect, instructor) SELECT instructor, SUM(enrolled) FROM classes GROUP BY instructor ORDER BY SUM?(enrolled) DESC;
+
+How many undergraduate classes with less than N students <enrolled> did we offer in a particular <semester> <year>?|WITH classes AS (SELECT course_title, sect, enrolled FROM courses WHERE semester IN ({1}) AND year IN ({2}) GROUP BY course_title, sect, enrolled) SELECT COUNT(*) FROM classes WHERE enrolled<({0});
+
